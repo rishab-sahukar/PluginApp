@@ -64,40 +64,6 @@ sap.ui.define([
 		},
 
 		/**
-		 * Function to determain Oris Returns or Cross-Border Returns
-		 * @method
-		 * @memberof sap.we.ui.pluginapp.controller.PluginController
-		 * @public
-		 * @return {boolean} true if Oris, false if CBR
-		 */
-		_isOrisReturn: function () {
-			let oMainModel = this.getModel("mainModel"),
-				fOris = oMainModel.getProperty("/orderData/OrisReturn");
-			if (fOris) {
-				return true;
-			} else {
-				return false;
-			}
-		},
-
-		/**
-		 * Function to determain HU without Delivery Returns
-		 * @method
-		 * @memberof sap.we.ui.pluginapp.controller.PluginController
-		 * @public
-		 * @return {boolean} true if HU without Delivery, false if With Delivery
-		 */
-		_isHuWoDlvReturn: function () {
-			let oMainModel = this.getModel("mainModel"),
-				fHuWoDlv = oMainModel.getProperty("/orderData/HuWoDlv");
-			if (fHuWoDlv !== "") {
-				return true;
-			} else {
-				return false;
-			}
-		},
-
-		/**
 		 * Getter for the resource bundle.
 		 * @method
 		 * @memberof sap.we.ui.pluginapp.controller.PluginController
@@ -287,6 +253,10 @@ sap.ui.define([
 
             return oFragment;
         },
+
+		onCloseDialog: function (oEvent) {
+            oEvent.getSource().getParent().close();
+        }
 
 		/**
 		  * @method

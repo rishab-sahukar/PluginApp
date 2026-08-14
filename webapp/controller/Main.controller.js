@@ -16,10 +16,6 @@ sap.ui.define([
         onOpenFragment(oEvent) {
             // Implementation for opening fragment
             this.openFragment("sap.we.ui.pluginapp.fragments.openFragment", "employeeDialog", oEvent.getSource());
-        },
-
-        onCloseDialog: function (oEvent) {
-            oEvent.getSource().getParent().close();
         }
 
     });
