@@ -1,0 +1,17 @@
+<mvc:View controllerName="sap.we.ui.pluginapp.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="_IDGenPage" title="{i18n>title}">
+        <Panel id="_IDGenPanel" headerText="FRAGMENT" expandable="true" expanded="true" width="100%">
+            <content>
+                <Button id="_IDGenButton" text="Open Fragment" press="onOpenFragment" />
+            </content>
+        </Panel>
+
+        <Panel id="_IDGenPanel1" headerText="FILE UPLOADER" expandable="true" expanded="true" width="100%">
+            <content>
+                <!-- <u:FileUploader id="_IDGenFileUploader" width="400px" change="onFileSelected" fileType="pdf,csv,xlsx,xls,txt"/> -->
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>
